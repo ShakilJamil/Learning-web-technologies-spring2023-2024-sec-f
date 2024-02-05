@@ -1,0 +1,23 @@
+<emplyee>
+<emplyee no="1">
+    <id>1</id>
+    <name>john Doe</name>
+    <address><flat></flat><house>38</house><road>3</road><location>Bonani</location><district>Dhaka</district></adress>
+	<department>sales</department>
+	<salary>20000</salary>
+</emplyee>
+<emplyee no="2">
+    <id>2</id>
+    <name>Mark zuckerberg</name>
+    <address><flat>A/1</flat><house>20</house><road>18</road><location>Mirpur</location><district>Dhaka</district></adress>
+	<department>Accounts</department>
+	<salary>12000</salary>
+</emplyee>
+<emplyee no="3">
+    <id>3</id>
+    <name>Ala Voski</name>
+    <address><flat></flat><house>38</house><road>3</road><location>Motijheel</location><district></district></adress>
+	<department>Human Resource</department>
+	<salary>30000</salary>
+</emplyee>
+</emplyee>
