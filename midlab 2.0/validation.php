@@ -58,6 +58,14 @@ if($_REQUEST['email']=="")
 $confirmpassword=$_REQUEST['confirmpassword'];
      
         }
+if($firstname!="")
+{
+    echo"success";
+}
+else
+{
+    echo "failed";
+}
         
     
 
