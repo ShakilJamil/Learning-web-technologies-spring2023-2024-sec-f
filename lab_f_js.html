@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>ASSIGNMENT</title>
+    </head>
+    <body>
+        <table border="1"  align="center">
+    <tr>
+          <form onsubmit="return IsvalidForm()" method="" action="" enctype="">
+           <td> Name: </td>
+            
+          <td><input type="text" name="name" value="" id="name" onkeyup="isValidName()"/></br><small id = "NameError" style ="color: red"></small></td>
+           </tr>
+          <td>  Email: </td>
+         <td> <input type="email" name="email" value="" id="email"  onkeyup="isValidName()"/></br><small id = "EmailError" style="color: red;"></small></td>
+        </tr>
+        <tr>
+            
+            
+          <td> Gender: </td>
+           <td> 
+           
+            <input type="checkbox" name="gender" value="" id="1"/> Male
+            <input type="checkbox" name="gender" value="" id="2"/> Female
+            <input type="checkbox" name="gender" value="" id="3"/> Other 
+           
+          </td>
+        </tr>   
+        
+          <tr>
+            <td> Date of Birth</td>
+           
+           <td> dd/<input type="text" name="dob" size="1px" value=""> mm/
+            <input type="text" name="dob" size="1px" value=""> yyyy/
+            <input type="text" name="dob" size="1px" value="">
+        </td>
+        </tr>
+        <tr>
+            <td>Degree</td>
+            
+<td>
+             <input type="checkbox" name="check[]" value="" />SSC
+                        <input type="checkbox" name="check[]" value="" />HSC
+                        <input type="checkbox" name="check[]" value="" />BSc. 
+                    </td>
+           
+        </tr>
+      <tr>
+       
+      <td> Blood Group</td>   <td>  <select name="">
+            <option value="">A+</option>
+            <option value="">B+</option>
+            <option value="">AB+</option>
+            <option value="">0+</option>
+            <option value="">0-</option>
+            
+        </select></td></tr>
+<tr>
+
+<td>Profile Picture</td>
+   
+  <td> <input type="file" name="myfile" value="" /> </td>
+    </tr>
+    <tr>
+        <td></td>
+               <td align="right"> <input type="submit" name="submit" value="Submit" />   <input type="submit" name="reset" value="Reset" /></td>
+
+
+
+</tr>        
+
+          </form>
+
+
+
+<script>
+    function checkAlphabet(alphabet)
+{
+    return ((alphabet < 'a' || alphabet > 'z') && (alphabet <'A' || alphabet > 'Z'));
+}   
+
+function isValidName() {
+    let name = document.getElementById('name').value;
+
+    if (name.length === 0) 
+    {
+        document.getElementById('NameError').innerHTML = "Name cannot be empty";
+        return false;
+    } 
+
+    else if (checkAlphabet(name))
+    {
+        document.getElementById('NameError').innerHTML = "Name need to be start with alphabet";
+        return false;
+    }
+
+    else if (name.length < 3) 
+    {
+        document.getElementById('NameError').innerHTML = "Name must be greater than 2 characters";
+        return false;
+    } 
+    else 
+    {
+        document.getElementById('NameError').innerHTML = "";
+        return true;
+    }
+    
+}
+
+
+
+ function isValidEmail() {
+    let email = document.getElementById('email').value;
+    let specialcharacter = email.indexOf('@');
+    let dotoperator = email.lastIndexOf('.');
+    let password = document.getElementById('upassword').value;
+
+    if (email.length === 0) 
+    {
+        document.getElementById('EmailError').innerHTML = "Email cannot be empty";
+        return false;
+    } 
+    else if (specialcharacter === -1 || specialcharacter === 0 || dotoperator === -1 || dotoperator <= specialcharacter+1 || dotoperator === email.length -1) 
+    {
+        document.getElementById('EmailError').innerHTML = "Invalid Email Address";
+        return false;
+    } 
+    else 
+    {
+        document.getElementById('EmailError').innerHTML = "";
+        return true;
+    }
+}
+function IsvalidForm()
+{
+    if(isValidName() === false|| isValidEmail() === false)
+    {
+        return false;
+    }
+
+    else
+    {
+        
+        return true;
+    }
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+    </body>
+</html>
